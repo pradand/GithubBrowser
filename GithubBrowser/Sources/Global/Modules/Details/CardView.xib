@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="GithubBrowser" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImageView" destination="xAw-QX-XWW" id="IVa-fO-3DR"/>
+                <outlet property="forksCountLabel" destination="YQA-Ll-DSg" id="AjA-2W-uA7"/>
+                <outlet property="forksTitleLabel" destination="KpL-CL-YY9" id="U51-jl-L8D"/>
+                <outlet property="repoLabel" destination="VWp-m4-Dif" id="JKd-HB-tZz"/>
+                <outlet property="starsCountLabel" destination="v5Z-gK-Mah" id="KtP-f4-CsO"/>
+                <outlet property="starsImageView" destination="3jK-K5-JSp" id="CiL-C2-PU3"/>
+                <outlet property="topContainerView" destination="5Mj-Cg-gVs" id="acc-y6-E7q"/>
+                <outlet property="usernameLabel" destination="w1E-GO-1jt" id="mRg-h7-dCM"/>
+                <outlet property="watchersCountLabel" destination="chz-jP-C48" id="d13-K6-Mca"/>
+                <outlet property="watchersTitleLabel" destination="MHH-oa-FWg" id="DyI-Q4-qdl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pnk-3J-G9E">
+                    <rect key="frame" x="35" y="0.0" width="344" height="161"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Mj-Cg-gVs">
+                            <rect key="frame" x="0.0" y="0.0" width="344" height="100"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="xAw-QX-XWW">
+                                    <rect key="frame" x="147" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="39N-Nc-wLL"/>
+                                        <constraint firstAttribute="height" constant="50" id="Kpm-G1-UYG"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tRo-BC-raj">
+                                    <rect key="frame" x="0.0" y="60" width="344" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1E-GO-1jt">
+                                            <rect key="frame" x="0.0" y="0.0" width="344" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                            <color key="textColor" name="Custom Dark Blue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWp-m4-Dif">
+                                            <rect key="frame" x="0.0" y="14.5" width="344" height="25.5"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                            <color key="textColor" name="Custom Dark Blue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="xAw-QX-XWW" firstAttribute="top" secondItem="5Mj-Cg-gVs" secondAttribute="top" id="2ab-U4-GBk"/>
+                                <constraint firstItem="tRo-BC-raj" firstAttribute="top" secondItem="xAw-QX-XWW" secondAttribute="bottom" constant="10" id="8HS-dl-G4g"/>
+                                <constraint firstAttribute="trailing" secondItem="tRo-BC-raj" secondAttribute="trailing" id="9dW-wZ-hWj"/>
+                                <constraint firstItem="tRo-BC-raj" firstAttribute="leading" secondItem="5Mj-Cg-gVs" secondAttribute="leading" id="Hvc-jZ-eT7"/>
+                                <constraint firstItem="xAw-QX-XWW" firstAttribute="centerX" secondItem="5Mj-Cg-gVs" secondAttribute="centerX" id="a1X-se-Uvx"/>
+                                <constraint firstAttribute="height" constant="100" id="p2P-8m-BKP"/>
+                                <constraint firstAttribute="bottom" secondItem="tRo-BC-raj" secondAttribute="bottom" id="qfs-3z-BSN"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pf3-AD-gSr">
+                            <rect key="frame" x="0.0" y="100" width="344" height="61"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="es5-ZA-6M1">
+                                    <rect key="frame" x="0.0" y="0.0" width="108" height="61"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="WATCHERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHH-oa-FWg">
+                                            <rect key="frame" x="31" y="0.0" width="46.5" height="29"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="9"/>
+                                            <color key="textColor" name="Custom Dark Blue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chz-jP-C48" customClass="PaddingLabel" customModule="GithubBrowser" customModuleProvider="target">
+                                            <rect key="frame" x="39" y="39" width="30.5" height="22"/>
+                                            <color key="backgroundColor" name="Lime"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GOj-sy-opn">
+                                    <rect key="frame" x="118" y="0.0" width="108" height="61"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="FORKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpL-CL-YY9">
+                                            <rect key="frame" x="40.5" y="0.0" width="27.5" height="29"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="9"/>
+                                            <color key="textColor" name="Custom Dark Blue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQA-Ll-DSg" customClass="PaddingLabel" customModule="GithubBrowser" customModuleProvider="target">
+                                            <rect key="frame" x="39" y="39" width="30.5" height="22"/>
+                                            <color key="backgroundColor" name="Custom Dark Blue"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y7B-qY-jtL">
+                                    <rect key="frame" x="236" y="0.0" width="108" height="61"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3jK-K5-JSp">
+                                            <rect key="frame" x="41.5" y="0.0" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="IdY-9Z-3Wf"/>
+                                                <constraint firstAttribute="width" constant="25" id="L1P-Yc-Ovl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.3542" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5Z-gK-Mah">
+                                            <rect key="frame" x="40" y="35" width="28" height="26"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                            <color key="textColor" name="Custom Dark Blue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pnk-3J-G9E" secondAttribute="trailing" constant="35" id="MNy-O6-Cwm"/>
+                <constraint firstAttribute="bottom" secondItem="pnk-3J-G9E" secondAttribute="bottom" priority="750" constant="15" id="O2Q-VH-1D8"/>
+                <constraint firstItem="pnk-3J-G9E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="35" id="nPW-6s-1AX"/>
+                <constraint firstItem="pnk-3J-G9E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="750" id="nQ9-8b-emq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="330.80357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="github" width="16" height="16"/>
+        <namedColor name="Custom Dark Blue">
+            <color red="0.15800000727176666" green="0.16300000250339508" blue="0.22699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Lime">
+            <color red="0.39154213669999999" green="0.66336762910000002" blue="0.32934337850000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
